@@ -16,7 +16,7 @@ registry with CORS enabled.
 import { Resolver, NpmHttpRegistry } from '@stackblitz/turbo-resolver';
 
 function resolve(dependencies){
-  // const resolver = new Resolver(); // For server-side usage, uses https://registry.npmjs.org which doesn't have CORS enabled
+  // const resolver = new Resolver(); // For client-side usage, uses https://registry.npmjs.org which doesn't have CORS enabled
 
   const resolver = new Resolver({
     registry: new NpmHttpRegistry({ registryUrl: 'https://registry.npmjs.cf/' })
